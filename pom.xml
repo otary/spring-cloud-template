@@ -12,6 +12,7 @@
         <module>spring-cloud-template-center</module>
         <module>spring-cloud-template-config-repo</module>
         <module>spring-cloud-template-monitor</module>
+        <module>spring-cloud-template-gateway</module>
     </modules>
 
     <properties>
