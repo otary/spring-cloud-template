@@ -5,8 +5,3 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:7002/
-    discovery:
-      enabled: true
-      service-id: spring-cloud-template-config
-
-

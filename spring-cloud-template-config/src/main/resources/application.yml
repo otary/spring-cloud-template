@@ -6,7 +6,7 @@ spring:
   cloud:
     config:
       server:
-        git:
+        git:  # 指定配置仓库
           uri: https://github.com/otary/spring-cloud-template
           search-paths: spring-cloud-template-config-repo
           username:

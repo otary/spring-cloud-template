@@ -11,6 +11,7 @@
         <module>spring-cloud-template-config</module>
         <module>spring-cloud-template-center</module>
         <module>spring-cloud-template-config-repo</module>
+        <module>spring-cloud-template-monitor</module>
     </modules>
 
     <properties>
@@ -37,6 +38,7 @@
         <redis.version>2.1.6.RELEASE</redis.version>
         <tkmybatis.version>2.1.5</tkmybatis.version>
         <pagehelper.version>1.2.11</pagehelper.version>
+        <spring-boot.version>2.1.2.RELEASE</spring-boot.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
 
@@ -44,12 +46,39 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server</artifactId>
+                <version>${springboot-admin.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${springboot-admin.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-server-ui</artifactId>
+                <version>${springboot-admin.version}</version>
+            </dependency>
+
+
 
             <dependency>
                 <groupId>com.alibaba</groupId>
@@ -113,6 +142,11 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
     </dependencies>
