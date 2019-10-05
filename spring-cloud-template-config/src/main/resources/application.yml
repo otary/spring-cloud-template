@@ -1,2 +1,21 @@
 server:
   port: 7002
+spring:
+  application:
+    name: spring-cloud-template-config  # @TODO
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/otary/spring-cloud-template
+          search-paths: spring-cloud-template-config-repo
+          username:
+          password:
+      label: master
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
