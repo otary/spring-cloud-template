@@ -8,3 +8,10 @@ spring:
     config:
       allowOverride: true
       overrideNone: true
+
+
+test:
+  a: test-a
+  b: test-b
+  port: 7001
+  host: 127.0.0.1

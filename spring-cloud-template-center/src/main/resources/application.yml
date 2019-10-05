@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: spring-cloud-template-center  ## @TODO
+
 eureka:
   instance:
     name: localhost  ## @TODO
